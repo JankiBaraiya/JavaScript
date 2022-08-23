@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#Counter
+		{
+			color: red;
+		}
+		#CounterName
+		{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="Start Counter" onclick="startcounter()">
+	<h1 id="CounterName">Counter</h1>
+	<h1 id="Counter">10</h1>
+
+	<script type="text/javascript">
+		var a=10;
+		var c;
+
+		function startcounter()
+		{
+			c=setInterval(printcounter,1000)	
+		}
+
+		function stopcounter() 
+		{
+			clearInterval(c);
+		}
+
+		function printcounter()
+		{
+			a--;
+			var temp = document.getElementById('Counter');
+			temp.innerHTML = a;
+
+			if(a==0)
+			{
+				stopcounter();
+			}
+		}
+
+	</script>
+</body>
+</html>
